@@ -18,19 +18,28 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.yo-globe {
   min-height: 100vh;
-  background: #fada3e;
+  display: grid;
+  position: absolute;
+  grid-gap: 0;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 40px auto 40px;
+  grid-template-areas:
+    "m m m m m m m m m m m m"
+    "c c c c c c c c c c c c"
+    "l l l l l l l l l l l l";
 }
 
 .container {
-  position: relative;
-  width: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
   display: grid;
+  grid-area: c;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
@@ -93,7 +102,7 @@ body {
 
   .container .card .imgBx,
   .container .card .content {
-    width: 50%;
+    width: 100%;
   }
 }
 

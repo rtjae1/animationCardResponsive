@@ -107,10 +107,10 @@ html {
 .links {
   /* border: solid black; */
   grid-area: l;
-  position: absolute;
+  position: fixed;
   width: 100vw;
   bottom: 0;
-  height: 40px;
+  /* height: 40px; */
   grid-area: l;
   z-index: 0;
   display: inline-flex;
